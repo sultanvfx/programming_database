@@ -6,7 +6,9 @@
 </head>
 <body>
 <h1>Programming Database</h1>
-<h3>{{ java.name }}:</h3>  <!-- referencing the data from the object passed to this html file from value in key 'java'-->
-<p>{{ java.description }}</p>
+{% for eachobj in all_items %}
+<h3>{{ eachobj.name }}:</h3>  <!-- referencing the data from the object passed to this html file from value in key 'java'-->
+<p>{{ eachobj.description }}</p>
+{% endfor %}
 </body>
 </html>

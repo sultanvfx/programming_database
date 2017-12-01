@@ -25,10 +25,19 @@ java = Item.objects.get(pk=1)
 java.delete()
 # -------------------------------------
 git init
-git add .
-git status
-
 git remote -v
 git config --global http.sslverify false
 git remote set-url origin https://sultanvfx@github.com/sultanvfx/programming_database.git
+git status
+git add .
+git status
+git commit -a -m "Initial 'Programming Database' project commit"
 git push -u origin master
+# -------------------------------------
+Workflow for quesrying data from Database & showing its result in html:
+Import your Models in the views.py file and then query it & finally send the
+result dictionary to html.
+
+# -------------------------------------
+
+
