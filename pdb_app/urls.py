@@ -18,4 +18,7 @@ from pdb_app import views
 
 urlpatterns = [
     url(r"^$", views.index, name="index_page"),
+    url(r"^item/(?P<item_id>[0-9]+)", views.item, name="item_page"),  # This is how we create dynamic URLs.
+    # Here we pass the id value from the variable "item_id" to the views.py file.
+    # Note that item_id declared here must be same variable name in views.py file as well.
 ]

@@ -7,8 +7,9 @@
 <body>
 <h1>Programming Database</h1>
 {% for eachobj in all_items %}
-<h3>{{ eachobj.name }}:</h3>  <!-- referencing the data from the object passed to this html file from value in key 'java'-->
-<p>{{ eachobj.description }}</p>
+    <a href="{% url 'item_page' item_id=eachobj.id %}">{{ eachobj.name }}</a>
+    <!-- here we creating the dynamic url & passing object's id value in parameter 'item_id' of urls.py file. -->
+
 {% endfor %}
 </body>
 </html>

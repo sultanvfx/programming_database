@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ item.name }} - Programming Database</title>
+</head>
+<body>
+<h1>Programming Database</h1>
+<a href="{% url 'index_page' %}">&lt Back</a> <!-- Note that here url 'name' must be passed in quotes, either single or double quotes.-->
+<h3>{{ item.name }}:</h3>  <!-- referencing the data from the object passed to this html file from value in key 'java'-->
+<p>{{ item.description }}</p>
+</body>
+</html>
