@@ -18,6 +18,10 @@ def index(request):
 
 
 def item(request, item_id):
+    try:
+        itm = Item.objects.get(id=item_id)
+    except Item.DoesNotExist:
+        itm = None
     template = loader.get_template("item.html")
-    context = {"item": Item.objects.get(id=item_id)}
+    context = {"item": itm}
     return HttpResponse(template.render(context, request))

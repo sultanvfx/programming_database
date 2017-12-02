@@ -32,12 +32,35 @@ git status
 git add .
 git status
 git commit -a -m "Initial 'Programming Database' project commit"
-git push -u origin master
+git push -u origin master  # Push your code to the 'master' branch of the remote 'origin' repo.
 # -------------------------------------
-Workflow for quesrying data from Database & showing its result in html:
+Workflow for querying data from Database & showing its result in html:
 Import your Models in the views.py file and then query it & finally send the
 result dictionary to html.
+# -------------------------------------
+To remove .pyc files from git, follow the below steps:
+#1. remove .pyc locally
+$ find . -name "*.pyc" -print
+$ find . -name "*.pyc" -delete
+#2. commit
 
+#3. push to remote repo.
+# -------------------------------------
+Note: If below command doesnt work:
+$ git push
+Then force the push by saying:
+$ git push --force  # Not that this process of forcing is not recommended.
+# -------------------------------------
+To get the log of pushes:
+$ git log
+# -------------------------------------
+$ git remote  # origin
+$ git branch  # master
+# -------------------------------------
+Important Tip: To remove already added & commited file from git:
+$ git rm --cached db.sqlite3
+# here we removing the file 'db.sqlite3'.
+# Note to use the --cached parameter.
 # -------------------------------------
 
-
+# -------------------------------------

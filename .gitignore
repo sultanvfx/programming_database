@@ -1,10 +1,2 @@
-# PyCharm Gui settings directory
 .idea/
-
-# Python Compiled files
-*.py[cod]
-
-# Files which are edited have backup file created with suffix ~
-*~
-
-
+*.pyc
