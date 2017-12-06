@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home - Programming Database</title>
+{% endblock %}
+
+
+{% block body %}
+    <!--{% for eachobj in all_items %}-->
+        <!--<a href="{% url 'item_page' item_id=eachobj.id %}">{{ eachobj.name }}</a>-->
+        <!-- here we creating the dynamic url & passing object's id value in parameter 'item_id' of urls.py file. -->
+    <!--{% endfor %}-->
+    {% for each_category in categories %}
+        <h2>{{ each_category.name }}</h2>
+        {% for each_item in each_category.item_set.all %}
+            <a href="{% url 'item_page' item_id=each_item.id %}">{{each_item.name}}</a>
+        {% endfor %}
+        <br>
+    {% endfor %}
+
+{% endblock %}

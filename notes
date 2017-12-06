@@ -1,0 +1,33 @@
+# To create an object of type 'Item':
+java = Item.objects.create(name="java", description="A programming lanuage. Current version is Java 8")
+java.name
+java.description
+java.pk
+java.id
+java.save()  # SAVEs item 'Item' object in the database.
+# -------------------------------------
+# GET ALL items from the 'Item' model:
+Item.objects.all()
+# -------------------------------------
+del java  # empty the variable.
+# way1 to GET the java object from the database:
+java = Item.objects.get(pk=1)
+java
+# -------------------------------------
+del java  # empty the variable.
+java
+# way2 to GET the java object from database:
+java = Item.objects.get(name='java')
+java
+# -------------------------------------
+# to DELETE an item from the database:
+java = Item.objects.get(pk=1)
+java.delete()
+
+# -------------------------------------
+Workflow for querying data from Database & showing its result in html:
+Import your Models in the views.py file and then query it & finally send the
+result dictionary to html.
+# -------------------------------------
+
+

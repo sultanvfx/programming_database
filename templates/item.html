@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>{{ item.name }} - Programming Database</title>
+{% endblock %}
+
+
+{% block body %}
+    <a href="{% url 'index_page' %}">&lt Back</a> <!-- Note that here url 'name' must be passed in quotes, either single or double quotes.-->
+
+    {% if item != None %}
+        <h2>{{ item.name }}:</h2>  <!-- referencing the data from the object passed to this html file from value in key 'java'-->
+        <h3>Category: "{{ item.category.name }}"</h3>
+        <p>{{ item.description }}</p>
+    {% else %}
+    <h2>Invalid item ID</h2>
+    {% endif %}
+
+{% endblock %}
